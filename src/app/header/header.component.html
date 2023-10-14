@@ -1,0 +1,21 @@
+<header class="p-2 flex justify-between">
+  <div class="inline-flex place-items-center">
+    <img src="../../assets/logo.svg" alt="" />
+    <app-navbar></app-navbar>
+  </div>
+  <div class="flex">
+    <button class="mx-4"><i-feather name="settings"></i-feather></button>
+    <details class="dropdown">
+      <summary>
+        <img src="../../assets/profile.jpg" class="w-12 rounded-full" />
+      </summary>
+      <ul
+        class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40"
+      >
+        <li>
+          <a>Switch to {{ loggedIn }}</a>
+        </li>
+      </ul>
+    </details>
+  </div>
+</header>

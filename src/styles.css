@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: calc(100vh - 1rem);
+  background: rgb(45, 49, 62);
+  background: linear-gradient(
+    180deg,
+    rgba(45, 49, 62, 1) 0%,
+    rgba(10, 6, 26, 1) 100%
+  );
+}
