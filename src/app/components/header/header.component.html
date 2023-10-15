@@ -1,0 +1,28 @@
+<header class="p-2 flex justify-between">
+  <div class="inline-flex place-items-center">
+    <img src="../../assets/logo.svg" alt="" />
+    <app-navbar></app-navbar>
+  </div>
+  <div class="flex">
+    <button class="mx-4"><i-feather name="settings"></i-feather></button>
+    <details class="dropdown dropdown-end">
+      <summary>
+        <div *ngIf="Admin === false" class="avatar">
+          <div class="w-14 rounded-full">
+            <img src="../../assets/profile.jpg" class="w-12 rounded-full" />
+          </div>
+        </div>
+        <div *ngIf="Admin" class="avatar placeholder">
+          <div class="bg-neutral-focus text-neutral-content rounded-full w-14">
+            <span class="text-3xl">A</span>
+          </div>
+        </div>
+      </summary>
+      <ul
+        class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40"
+      >
+        <li (click)="ChangeUser()">Switch to {{ loggedIn }}</li>
+      </ul>
+    </details>
+  </div>
+</header>

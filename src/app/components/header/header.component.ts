@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  loggedIn: string = 'User';
+  Admin: boolean = true;
+  loggedIn: string = this.Admin ? 'User' : 'Admin';
+  ChangeUser() {
+    this.Admin = !this.Admin;
+  }
 }
