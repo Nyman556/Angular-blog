@@ -1,11 +1,11 @@
 export class Post {
-  title: string;
-  thumbnailUrl: string;
-  body: string;
-  creationDate: Date;
-  likes: number;
-  dislikes: number;
-  comments: string[];
+  public title: string;
+  public thumbnailUrl: string;
+  public body: string;
+  public creationDate: Date;
+  public likes: number;
+  public dislikes: number;
+  public comments: string[];
   constructor(
     title: string,
     thumbnailUrl: string,

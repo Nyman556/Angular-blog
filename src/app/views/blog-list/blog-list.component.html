@@ -1,0 +1,7 @@
+<ul class="grid-flow-row">
+  <li *ngFor="let post of posts">
+    <img class="w-32" src="{{ post.thumbnailUrl }}" alt="" />
+    {{ post.title | titlecase }}
+    {{ post.creationDate }}
+  </li>
+</ul>
