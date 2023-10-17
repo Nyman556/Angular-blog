@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 
 import { FeatherModule } from 'angular-feather';
-import { ChevronDown, Settings } from 'angular-feather/icons';
+import {
+  ChevronDown,
+  Settings,
+  Clock,
+  MessageCircle,
+} from 'angular-feather/icons';
 
 const icons = {
   ChevronDown,
   Settings,
+  Clock,
+  MessageCircle,
 };
 
 @NgModule({

@@ -1,11 +1,15 @@
 <header class="p-2 flex justify-between">
   <div class="inline-flex place-items-center">
     <img src="../../assets/logo.svg" alt="" />
-    <app-navbar></app-navbar>
+    <nav class="space-x-12 mx-4">
+      <a routerLink="" (click)="print(this)">List of Posts</a>
+      <a routerLink="About">About Me</a>
+      <a *ngIf="Admin === true" routerLink="Create">Create a new post</a>
+    </nav>
   </div>
   <div class="flex">
     <button class="mx-4"><i-feather name="settings"></i-feather></button>
-    <details class="dropdown dropdown-end">
+    <details class="dropdown dropdown-end" ngModel #AvatarDropdown>
       <summary>
         <div *ngIf="Admin === false" class="avatar">
           <div class="w-14 rounded-full">
@@ -19,9 +23,9 @@
         </div>
       </summary>
       <ul
-        class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40"
+        class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32"
       >
-        <li (click)="ChangeUser()">Switch to {{ loggedIn }}</li>
+        <li routerLink="" (click)="ChangeUser()">Switch to {{ loggedIn }}</li>
       </ul>
     </details>
   </div>

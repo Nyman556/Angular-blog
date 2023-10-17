@@ -8,7 +8,7 @@ export class PostService {
   date: Date = new Date();
   private _posts: Post[] = [
     {
-      title: 'hey baberiba',
+      title: 'string',
       thumbnailUrl: 'https://source.unsplash.com/random',
       body: 'string',
       creationDate: this.date,
@@ -17,7 +17,7 @@ export class PostService {
       comments: ['hello'],
     },
     {
-      title: 'slongdong',
+      title: 'string',
       thumbnailUrl: 'https://source.unsplash.com/random',
       body: 'string',
       creationDate: this.date,
@@ -26,7 +26,34 @@ export class PostService {
       comments: ['hello'],
     },
     {
-      title: 'wahoooo',
+      title: 'string',
+      thumbnailUrl: 'https://source.unsplash.com/random',
+      body: 'string',
+      creationDate: this.date,
+      likes: 0,
+      dislikes: 0,
+      comments: ['hello'],
+    },
+    {
+      title: 'string',
+      thumbnailUrl: 'https://source.unsplash.com/random',
+      body: 'string',
+      creationDate: this.date,
+      likes: 0,
+      dislikes: 0,
+      comments: ['hello'],
+    },
+    {
+      title: 'string',
+      thumbnailUrl: 'https://source.unsplash.com/random',
+      body: 'string',
+      creationDate: this.date,
+      likes: 0,
+      dislikes: 0,
+      comments: ['hello'],
+    },
+    {
+      title: 'string',
       thumbnailUrl: 'https://source.unsplash.com/random',
       body: 'string',
       creationDate: this.date,
@@ -40,7 +67,7 @@ export class PostService {
   public get post(): Post[] {
     return this._posts;
   }
-  public addPost(input: Post): void {
-    this._posts.push(input);
+  public addPost(post: Post): void {
+    this._posts.push(post);
   }
 }

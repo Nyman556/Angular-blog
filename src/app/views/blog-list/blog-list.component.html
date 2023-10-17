@@ -1,7 +1,28 @@
-<ul class="grid-flow-row">
-  <li *ngFor="let post of posts">
-    <img class="w-32" src="{{ post.thumbnailUrl }}" alt="" />
-    {{ post.title | titlecase }}
-    {{ post.creationDate }}
-  </li>
-</ul>
+<div class="bg-[#343744] px-10 rounded-lg">
+  <div class="py-4 flex justify-between">
+    <h2 class="text-2xl">Browse All Posts</h2>
+    <select class="outline-none px-2 py-1 bg-[#3E414E]">
+      <option value="" disabled selected hidden>Sort By</option>
+      <option value="comments">All</option>
+      <option value="comments">Most Comments</option>
+      <option value="likes">Most Likes</option>
+    </select>
+  </div>
+  <ul class="bg-[#343744] grid grid-cols-3 gap-10">
+    <a
+      routerLink="/Blog"
+      *ngFor="let post of posts"
+      class="rounded-t-lg rounded-b-lg flex flex-col justify-center bg-[#3B3848] shadow-lg hover:outline-8 hover:outline transition-all outline-slate-600"
+    >
+      <div>
+        <img class="h-auto rounded-t-lg" src="{{ post.thumbnailUrl }}" alt="" />
+      </div>
+      <div class="p-4">
+        <h1 class="text-xl">
+          {{ post.title | titlecase }}
+        </h1>
+        <span>{{ post.creationDate | date : "mediumDate" }}</span>
+      </div>
+    </a>
+  </ul>
+</div>
