@@ -1,32 +1,46 @@
-<header class="p-2 flex justify-between">
+<header class="py-2 flex justify-between">
   <div class="inline-flex place-items-center">
     <img src="../../assets/logo.svg" alt="" />
-    <nav class="space-x-12 mx-4">
+    <nav class="space-x-12 mx-4 hidden md:flex">
       <a routerLink="" (click)="print(this)">List of Posts</a>
       <a routerLink="About">About Me</a>
-      <a *ngIf="Admin === true" routerLink="Create">Create a new post</a>
+      <a *ngIf="Admin" routerLink="Create">Create post</a>
     </nav>
+    <div class="dropdown mx-4 block md:hidden">
+      <label tabindex="0" class="btn m-1 mx-4">Blog</label>
+      <ul
+        tabindex="0"
+        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+      >
+        <li><a routerLink="" (click)="print(this)">List of Posts</a></li>
+        <li><a routerLink="About">About Me</a></li>
+        <li *ngIf="Admin"><a routerLink="Create">Create post</a></li>
+      </ul>
+    </div>
   </div>
   <div class="flex">
     <button class="mx-4"><i-feather name="settings"></i-feather></button>
-    <details class="dropdown dropdown-end" ngModel #AvatarDropdown>
-      <summary>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" class="m-1 mx-4 hover:cursor-pointer">
         <div *ngIf="Admin === false" class="avatar">
           <div class="w-14 rounded-full">
             <img src="../../assets/profile.jpg" class="w-12 rounded-full" />
           </div>
         </div>
         <div *ngIf="Admin" class="avatar placeholder">
-          <div class="bg-neutral-focus text-neutral-content rounded-full w-14">
+          <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
             <span class="text-3xl">A</span>
           </div>
         </div>
-      </summary>
+      </div>
       <ul
-        class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32"
+        tabindex="0"
+        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 text-center"
       >
-        <li routerLink="" (click)="ChangeUser()">Switch to {{ loggedIn }}</li>
+        <li class="hover:cursor-pointer" routerLink="" (click)="ChangeUser()">
+          Switch to {{ loggedIn }}
+        </li>
       </ul>
-    </details>
+    </div>
   </div>
 </header>

@@ -1,4 +1,4 @@
-<div class="bg-[#343744] px-10 rounded-lg">
+<div class="bg-slate-400 dark:bg-[#343744] px-10 rounded-lg">
   <div class="py-4 flex justify-between">
     <h2 class="text-2xl">Browse All Posts</h2>
     <select class="outline-none px-2 py-1 bg-[#3E414E]">
@@ -8,7 +8,7 @@
       <option value="likes">Most Likes</option>
     </select>
   </div>
-  <ul class="bg-[#343744] grid grid-cols-3 gap-10">
+  <ul class="grid lg:grid-cols-3 gap-10">
     <a
       routerLink="/Blog"
       *ngFor="let post of posts"
