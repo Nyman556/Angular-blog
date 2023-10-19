@@ -1,1 +1,36 @@
-<div class="bg-[#343744] p-10 rounded-lg">hello this is a create post</div>
+<div class="bg-[#343744] p-10 rounded-lg flex flex-col space-y-4">
+  <h2 class="text-xl">Create a new post</h2>
+  <div class="divider"></div>
+  <div class="form-control w-full">
+    <label class="label">
+      <span class="label-text">Title</span>
+    </label>
+    <input
+      type="text"
+      placeholder="Type here..."
+      class="input input-bordered w-full"
+    />
+    <label class="label">
+      <span class="label-text">Image Url</span>
+    </label>
+    <input
+      type="text"
+      placeholder="https://placehold.co/600x400/EEE/31343C"
+      class="input input-bordered w-full"
+    />
+  </div>
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Content</span>
+    </label>
+    <textarea
+      class="textarea textarea-bordered"
+      placeholder="Type here..."
+      rows="10"
+    ></textarea>
+  </div>
+  <div class="flex justify-end space-x-4">
+    <button class="btn bg-transparent border-white">Discard</button>
+    <button class="btn bg-primary">Publish</button>
+  </div>
+</div>
