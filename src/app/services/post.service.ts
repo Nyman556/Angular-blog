@@ -8,58 +8,82 @@ export class PostService {
   date: Date = new Date();
   private _posts: Post[] = [
     {
-      title: 'string',
+      id: 1,
+      title: '5 Spännande Teknologier som Förändrar Framtiden',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: 'Teknologin går framåt i en rasande takt, och den påverkar alla aspekter av våra liv. I detta inlägg tittar vi på fem spännande teknologier som har potentialen att förändra framtiden. Från artificiell intelligens till kvantdatorer - vi utforskar de senaste innovationerna som kan forma vår värld. Läs mer om dessa banbrytande teknologier och deras potential att omdefiniera vårt sätt att leva.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 120,
+      dislikes: 8,
+      comments: [
+        'Spännande inlägg!',
+        'Vilken teknologi är du mest entusiastisk över?',
+      ],
     },
     {
-      title: 'string',
+      id: 2,
+      title: 'Hur 5G Revolutionerar Mobilkommunikationen',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: '5G-teknologin har kommit för att stanna och den revolutionerar mobilkommunikationen. Med snabbare hastigheter och låg latens möjliggör 5G en mängd nya möjligheter, från autonoma fordon till avancerad augmented reality. I detta inlägg undersöker vi hur 5G fungerar, dess fördelar och de spännande användningsområden som öppnas upp. Ta reda på hur den femte generationen av mobilnätet är på väg att förändra hur vi kommunicerar.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 85,
+      dislikes: 3,
+      comments: [
+        'Fantastiskt inlägg om 5G!',
+        'Vilka appar tror du kommer dra nytta av 5G mest?',
+      ],
     },
     {
-      title: 'string',
+      id: 3,
+      title: 'Säkerhetstips för att Skydda Dina Personuppgifter Online',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: 'I den digitala tidsåldern är säkerheten för dina personuppgifter avgörande. Med ökande hot från cyberbrott är det viktigt att veta hur du kan skydda dina personliga data online. I detta inlägg delar vi några användbara säkerhetstips, inklusive att använda starka lösenord, vara försiktig med e-postbedrägerier och använda tvåfaktorsautentisering. Lär dig hur du kan säkra dina digitala avtryck och minimera risken för att utsättas för dataintrång.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 95,
+      dislikes: 6,
+      comments: [
+        'Bra tips för online-säkerhet!',
+        'Har du några andra råd för att undvika bedrägerier?',
+      ],
     },
     {
-      title: 'string',
+      id: 4,
+      title: 'Framtidens Transport: Autonoma Fordon',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: 'Autonoma fordon är på väg att förändra sättet vi reser. Med avancerad teknik som självkörande bilar och drönare som levererar paket blir framtidens transport effektivare och säkrare. I detta inlägg utforskar vi de senaste framstegen inom autonoma fordon och deras potential att minska trafikstockningar och olyckor. Upptäck hur dessa fordon kan förändra våra städer och hur vi rör oss.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 72,
+      dislikes: 5,
+      comments: [
+        'Spännande framtid för transport!',
+        'Tror du att du kommer använda en självkörande bil inom de närmaste åren?',
+      ],
     },
     {
-      title: 'string',
+      id: 5,
+      title: 'Virtual Reality: En Verklighet som inte är Verklighet',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: 'Virtual Reality (VR) har tagit underhållningsvärlden med storm. Med hjälp av VR-hjälmar kan användare dyka in i digitala världar och uppleva äventyr som aldrig förr. I detta inlägg går vi igenom hur VR-teknik fungerar och de olika användningsområdena, från spel och utbildning till medicin. Utforska hur VR förändrar vårt sätt att interagera med digitala innehåll.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 105,
+      dislikes: 7,
+      comments: [
+        'Fantastiskt inlägg om VR!',
+        'Har du någonsin provat en VR-upplevelse?',
+      ],
     },
     {
-      title: 'string',
+      id: 6,
+      title: 'Blockchain: Framtiden för Säkerhet och Transparens',
       thumbnailUrl: 'https://source.unsplash.com/random',
-      body: 'string',
+      body: 'Blockchain-tekniken har potentialen att förändra sättet vi hanterar transaktioner och data. Med dess decentraliserade och säkra natur kan blockchain användas inom allt från kryptokurser till röstningssystem. I detta inlägg dyker vi djupare in i blockchain, hur det fungerar och de möjliga fördelarna för samhället. Lär dig hur blockchain-tekniken skapar en ny nivå av transparens och säkerhet.',
       creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: ['hello'],
+      likes: 93,
+      dislikes: 4,
+      comments: [
+        'Spännande inlägg om blockchain!',
+        'Tror du att blockchain kommer revolutionera finanssektorn?',
+      ],
     },
   ];
 
@@ -69,5 +93,8 @@ export class PostService {
   }
   public addPost(post: Post): void {
     this._posts.push(post);
+  }
+  getPostById(id: number): Post | undefined {
+    return this.post.find((post) => post.id === id);
   }
 }

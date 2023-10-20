@@ -1,27 +1,30 @@
 <div class="bg-slate-400 dark:bg-[#343744] px-10 rounded-lg">
-  <div class="py-4 flex justify-between">
+  <div class="pt-6 flex justify-between">
     <h2 class="text-2xl">Browse All Posts</h2>
-    <select class="outline-none px-2 py-1 bg-[#3E414E]">
+    <select class="outline-none px-2 bg-[#3E414E]">
       <option value="" disabled selected hidden>Sort By</option>
       <option value="comments">All</option>
       <option value="comments">Most Comments</option>
       <option value="likes">Most Likes</option>
     </select>
   </div>
-  <ul class="grid lg:grid-cols-3 gap-10">
+  <div class="divider"></div>
+  <ul class="grid lg:grid-cols-3 gap-10 pb-6">
     <a
-      routerLink="/Blog"
       *ngFor="let post of posts"
-      class="rounded-t-lg rounded-b-lg flex flex-col justify-center bg-[#3B3848] shadow-lg hover:outline-8 hover:outline transition-all outline-slate-600"
+      [routerLink]="['/Blog', post.id]"
+      class="card w-80 bg-base-100 shadow-xl hover:outline-8 hover:outline transition-all outline-slate-600"
     >
-      <div>
-        <img class="h-auto rounded-t-lg" src="{{ post.thumbnailUrl }}" alt="" />
-      </div>
-      <div class="p-4">
-        <h1 class="text-xl">
+      <figure>
+        <img src="{{ post.thumbnailUrl }}" />
+      </figure>
+      <div class="card-body flex justify-between">
+        <h2 class="card-title">
           {{ post.title | titlecase }}
-        </h1>
-        <span>{{ post.creationDate | date : "mediumDate" }}</span>
+        </h2>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Tech</div>
+        </div>
       </div>
     </a>
   </ul>

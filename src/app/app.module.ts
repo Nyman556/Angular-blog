@@ -9,6 +9,7 @@ import { BlogListComponent } from './views/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './views/blog-details/blog-details.component';
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { CreatePostComponent } from './views/create-post/create-post.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CreatePostComponent } from './views/create-post/create-post.component';
     BlogDetailsComponent,
     AboutMeComponent,
     CreatePostComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, IconsModule],
   providers: [],
