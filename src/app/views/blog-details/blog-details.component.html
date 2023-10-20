@@ -22,8 +22,16 @@
     src="https://source.unsplash.com/random"
     class="rounded-sm w-max h-auto"
   />
-  <div class="my-4">
+  <div class="my-4 flex flex-col">
     <p>{{ post?.body }}</p>
+    <div class="space-x-4 mt-8">
+      <button class="btn">
+        <i-feather name="thumbs-up"></i-feather> {{ post?.likes }}
+      </button>
+      <button class="btn">
+        <i-feather name="thumbs-down"></i-feather> {{ post?.dislikes }}
+      </button>
+    </div>
   </div>
 </div>
 <h4 class="text-lg">

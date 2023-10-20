@@ -6,6 +6,8 @@ import {
   Settings,
   Clock,
   MessageCircle,
+  ThumbsDown,
+  ThumbsUp,
 } from 'angular-feather/icons';
 
 const icons = {
@@ -13,6 +15,8 @@ const icons = {
   Settings,
   Clock,
   MessageCircle,
+  ThumbsDown,
+  ThumbsUp,
 };
 
 @NgModule({
