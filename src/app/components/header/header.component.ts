@@ -13,8 +13,6 @@ export class HeaderComponent {
   ChangeUser() {
     this.Admin = !this.Admin;
     this.loggedIn = this.Admin ? 'User' : 'Admin';
-    console.log(this.loggedIn);
-    console.log(this._avatarDropdown.nativeElement.attributes[3]);
   }
   print(x: any) {}
 }

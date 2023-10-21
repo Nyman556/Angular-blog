@@ -19,26 +19,30 @@
     </div>
   </div>
   <div class="flex">
-    <button class="mx-4"><i-feather name="settings"></i-feather></button>
-    <div class="dropdown dropdown-end">
-      <div tabindex="0" class="m-1 mx-4 hover:cursor-pointer">
-        <div *ngIf="Admin === false" class="avatar">
-          <div class="w-14 rounded-full">
-            <img src="../../assets/profile.jpg" class="w-12 rounded-full" />
-          </div>
+    <div class="dropdown dropdown-end bg-[#343744] rounded-full">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div *ngIf="!Admin" class="w-10 rounded-full">
+          <img src="../../../assets/profile.jpg" />
         </div>
         <div *ngIf="Admin" class="avatar placeholder">
-          <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
-            <span class="text-3xl">A</span>
+          <div class="text-neutral-content">
+            <span class="text-2xl">A</span>
           </div>
         </div>
-      </div>
+      </label>
       <ul
         tabindex="0"
-        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 text-center"
+        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
       >
-        <li class="hover:cursor-pointer" routerLink="" (click)="ChangeUser()">
-          Switch to {{ loggedIn }}
+        <li>
+          <a class="justify-between">
+            Profile
+            <span class="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+        <li>
+          <span (click)="ChangeUser()">Switch to {{ loggedIn }}</span>
         </li>
       </ul>
     </div>

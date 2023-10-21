@@ -1,7 +1,26 @@
-<div class="bg-[#343744] p-10 rounded-lg">
-  <div class="pb-4 mb-4 border-b flex align-middle justify-between">
-    <div>
-      <h3 class="text-2xl">{{ post?.title }}</h3>
+<div class="my-4 bg-[#343744] p-10 rounded-lg">
+  <div class="hero min-h-fit my-4">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <img
+        src="{{ post?.thumbnailUrl }}"
+        class="max-w-sm rounded-lg shadow-2xl"
+      />
+      <div>
+        <h1 class="text-5xl font-bold">{{ post?.title | titlecase }}</h1>
+        <p class="py-6">
+          {{ post?.body }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-row justify-between">
+    <div class="space-x-4 mt-8">
+      <button class="btn">
+        <i-feather name="thumbs-up"></i-feather> {{ post?.likes }}
+      </button>
+      <button class="btn">
+        <i-feather name="thumbs-down"></i-feather> {{ post?.dislikes }}
+      </button>
     </div>
     <div class="flex space-x-4">
       <div
@@ -18,26 +37,7 @@
       </div>
     </div>
   </div>
-  <img
-    src="https://source.unsplash.com/random"
-    class="rounded-sm w-max h-auto"
-  />
-  <div class="my-4 flex flex-col">
-    <p>{{ post?.body }}</p>
-    <div class="space-x-4 mt-8">
-      <button class="btn">
-        <i-feather name="thumbs-up"></i-feather> {{ post?.likes }}
-      </button>
-      <button class="btn">
-        <i-feather name="thumbs-down"></i-feather> {{ post?.dislikes }}
-      </button>
-    </div>
-  </div>
 </div>
-<h4 class="text-lg">
-  Comments:
-  <span>{{ post?.comments?.length }}</span>
-</h4>
 <div>
   <ul class="space-y-4">
     <li
