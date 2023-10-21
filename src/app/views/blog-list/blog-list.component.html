@@ -15,10 +15,10 @@
       [routerLink]="['/Blog', post.id]"
       class="card w-80 bg-base-100 shadow-xl hover:outline-8 hover:outline transition-all outline-slate-600"
     >
-      <figure>
-        <img src="{{ post.thumbnailUrl }}" />
+      <figure class="h-2/4">
+        <img class="h-4/4" src="{{ post.thumbnailUrl }}" />
       </figure>
-      <div class="card-body flex justify-between">
+      <div class="h-2/4 card-body flex justify-between">
         <h2 class="card-title">
           {{ post.title | titlecase }}
         </h2>
