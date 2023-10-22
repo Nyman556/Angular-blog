@@ -100,6 +100,9 @@ export class PostService {
   public addPost(post: Post): void {
     this._posts.push(post);
   }
+  public addComment(comment: string, id: number) {
+    this._posts[id].comments.push(comment);
+  }
   getPostById(id: number): Post | undefined {
     return this.post.find((post) => post.id === id);
   }

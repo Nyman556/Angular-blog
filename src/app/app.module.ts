@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { IconsModule } from './icons/icons.module';
 
@@ -21,7 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CreatePostComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, IconsModule],
+  imports: [BrowserModule, AppRoutingModule, IconsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

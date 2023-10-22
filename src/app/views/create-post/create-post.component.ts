@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -7,5 +8,29 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./create-post.component.css'],
 })
 export class CreatePostComponent {
-  constructor(private PostService: PostService) {}
+  date: Date = new Date();
+  NewPost: Post;
+  get posts(): Post[] {
+    return this.PostService.post;
+  }
+  constructor(private PostService: PostService) {
+    this.NewPost = {
+      id: this.posts.length + 1,
+      title: '',
+      thumbnailUrl: '',
+      body: '',
+      creationDate: this.date,
+      likes: 0,
+      dislikes: 0,
+      comments: [],
+    };
+  }
+  SubmitPost() {
+    this.PostService.addPost(this.NewPost);
+  }
+  clear() {
+    this.NewPost.title = '';
+    this.NewPost.thumbnailUrl = '';
+    this.NewPost.body = '';
+  }
 }

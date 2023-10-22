@@ -13,7 +13,7 @@
     <a
       *ngFor="let post of posts"
       [routerLink]="['/Blog', post.id]"
-      class="card w-80 bg-base-100 shadow-xl hover:outline-8 hover:outline transition-all outline-slate-600"
+      class="card lg:w-80 shadow-xl hover:outline-8 hover:outline transition-all outline-slate-600"
     >
       <figure class="h-2/4">
         <img class="h-4/4" src="{{ post.thumbnailUrl }}" />
