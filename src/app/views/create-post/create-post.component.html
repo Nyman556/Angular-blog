@@ -1,46 +1,44 @@
 <div class="bg-[#343744] p-10 rounded-lg flex flex-col space-y-4">
   <h2 class="text-xl">Create a new post</h2>
   <div class="divider"></div>
-  <form>
-    <div class="form-control w-full">
-      <label class="label">
-        <span class="label-text">Title</span>
-      </label>
-      <input
-        type="text"
-        placeholder="Type here..."
-        class="input input-bordered w-full"
-        [(ngModel)]="NewPost.title"
-        name="title"
-      />
-      <label class="label">
-        <span class="label-text">Image Url</span>
-      </label>
-      <input
-        type="text"
-        placeholder="https://placehold.co/600x400/EEE/31343C"
-        class="input input-bordered w-full"
-        [(ngModel)]="NewPost.thumbnailUrl"
-        name="thumbnailUrl"
-      />
-    </div>
-    <div class="form-control">
-      <label class="label">
-        <span class="label-text">Content</span>
-      </label>
-      <textarea
-        class="textarea textarea-bordered"
-        placeholder="Type here..."
-        rows="10"
-        [(ngModel)]="NewPost.body"
-        name="body"
-      ></textarea>
-    </div>
-    <div class="flex justify-end space-x-4 my-4">
-      <button class="btn bg-transparent border-white" (click)="clear()">
-        Discard
-      </button>
-      <input type="submit" class="btn bg-primary" value="Publish" />
-    </div>
-  </form>
+  <div class="form-control w-full">
+    <label class="label">
+      <span class="label-text">Title</span>
+    </label>
+    <input
+      type="text"
+      placeholder="Type here..."
+      class="input input-bordered w-full"
+      [(ngModel)]="NewPost.title"
+      name="title"
+    />
+    <label class="label">
+      <span class="label-text">Image Url</span>
+    </label>
+    <input
+      type="text"
+      placeholder="https://placehold.co/600x400/EEE/31343C"
+      class="input input-bordered w-full"
+      [(ngModel)]="NewPost.thumbnailUrl"
+      name="thumbnailUrl"
+    />
+  </div>
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Content</span>
+    </label>
+    <textarea
+      class="textarea textarea-bordered"
+      placeholder="Type here..."
+      rows="10"
+      [(ngModel)]="NewPost.body"
+      name="body"
+    ></textarea>
+  </div>
+  <div class="flex justify-end space-x-4 my-4">
+    <button class="btn bg-transparent border-white" (click)="clear()">
+      Discard
+    </button>
+    <button (click)="SubmitPost()" class="btn bg-primary">Publish</button>
+  </div>
 </div>

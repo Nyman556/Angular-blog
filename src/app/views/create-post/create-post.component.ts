@@ -26,7 +26,13 @@ export class CreatePostComponent {
     };
   }
   SubmitPost() {
-    this.PostService.addPost(this.NewPost);
+    if (
+      this.NewPost.title &&
+      this.NewPost.thumbnailUrl &&
+      this.NewPost.body !== ''
+    ) {
+      this.PostService.addPost(this.NewPost);
+    }
   }
   clear() {
     this.NewPost.title = '';
