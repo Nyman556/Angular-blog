@@ -15,10 +15,10 @@
   </div>
   <div class="flex flex-row justify-between">
     <div class="space-x-4 mt-8">
-      <button class="btn">
+      <button class="btn" (click)="likeClick()">
         <i-feather name="thumbs-up"></i-feather> {{ post?.likes }}
       </button>
-      <button class="btn">
+      <button class="btn" (click)="dislikeClick()">
         <i-feather name="thumbs-down"></i-feather> {{ post?.dislikes }}
       </button>
     </div>

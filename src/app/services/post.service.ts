@@ -103,6 +103,12 @@ export class PostService {
   public addComment(comment: string, id: number) {
     this._posts[id].comments.push(comment);
   }
+  public like(post: Post) {
+    post.likes++;
+  }
+  public dislike(post: Post) {
+    post.dislikes++;
+  }
   getPostById(id: number): Post | undefined {
     return this.post.find((post) => post.id === id);
   }
