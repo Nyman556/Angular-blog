@@ -26,6 +26,7 @@ export class BlogDetailsComponent {
   createComment() {
     if (this.comment) {
       this.PostService.addComment(this.comment, this._postId);
+      this.comment = '';
     }
   }
 }

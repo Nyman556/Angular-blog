@@ -100,7 +100,7 @@ export class PostService {
     this._posts.push(post);
   }
   public addComment(comment: string, id: number) {
-    this._posts[id].comments.push(comment);
+    this._posts[id - 1].comments.push(comment);
   }
   public like(post: Post) {
     post.likes++;
