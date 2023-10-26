@@ -52,10 +52,13 @@
       <span class="label-text">Comment</span>
     </label>
     <textarea
+      [(ngModel)]="comment"
       class="textarea textarea-bordered"
       placeholder="Type here..."
       rows="3"
     ></textarea>
   </div>
-  <button class="btn bg-primary my-4 justify-end">Comment</button>
+  <button class="btn bg-primary my-4 justify-end" (click)="createComment()">
+    Comment
+  </button>
 </div>

@@ -11,15 +11,21 @@ import { PostService } from 'src/app/services/post.service';
 export class BlogDetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   post: Post | undefined;
+  comment: string = '';
+  _postId: number;
   constructor(private PostService: PostService) {
-    const postId = Number(this.route.snapshot.params['id']);
-    console.log(postId);
-    this.post = this.PostService.getPostById(postId);
+    this._postId = Number(this.route.snapshot.params['id']);
+    this.post = this.PostService.getPostById(this._postId);
   }
   likeClick() {
     if (this.post !== undefined) this.PostService.like(this.post);
   }
   dislikeClick() {
     if (this.post !== undefined) this.PostService.dislike(this.post);
+  }
+  createComment() {
+    if (this.comment) {
+      this.PostService.addComment(this.comment, this._postId);
+    }
   }
 }
