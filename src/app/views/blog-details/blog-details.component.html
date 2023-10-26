@@ -1,11 +1,17 @@
 <div class="my-4 bg-[#343744] p-10 rounded-lg">
-  <div class="hero min-h-fit my-4">
+  <div class="mx-8">
+    <a routerLink="" class="inline-flex space-x-2">
+      <i-feather name="chevron-left"></i-feather>
+      <span>Back</span>
+    </a>
+  </div>
+  <div class="hero min-h-fit">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <img
         src="{{ post?.thumbnailUrl }}"
-        class="max-w-sm rounded-lg shadow-2xl"
+        class="max-w-md rounded-lg shadow-2xl"
       />
-      <div>
+      <div class="max-w-lg">
         <h1 class="text-4xl font-bold">{{ post?.title | titlecase }}</h1>
         <p class="py-6">
           {{ post?.body }}

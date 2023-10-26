@@ -8,6 +8,7 @@ import {
   MessageCircle,
   ThumbsDown,
   ThumbsUp,
+  ChevronLeft,
 } from 'angular-feather/icons';
 
 const icons = {
@@ -17,6 +18,7 @@ const icons = {
   MessageCircle,
   ThumbsDown,
   ThumbsUp,
+  ChevronLeft,
 };
 
 @NgModule({
