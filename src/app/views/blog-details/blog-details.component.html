@@ -6,7 +6,7 @@
         class="max-w-sm rounded-lg shadow-2xl"
       />
       <div>
-        <h1 class="text-5xl font-bold">{{ post?.title | titlecase }}</h1>
+        <h1 class="text-4xl font-bold">{{ post?.title | titlecase }}</h1>
         <p class="py-6">
           {{ post?.body }}
         </p>
@@ -22,15 +22,15 @@
         <i-feather name="thumbs-down"></i-feather> {{ post?.dislikes }}
       </button>
     </div>
-    <div class="flex space-x-4">
+    <div class="flex space-x-4 align-bottom mt-8">
       <div
-        class="bg-[#3E414E] py-2 px-4 rounded-md inline-flex place-items-center space-x-4"
+        class="bg-[#3E414E] py-2 px-4 rounded-md space-x-4 inline-flex h-fit"
       >
         <i-feather name="message-circle" class="icon-small"></i-feather
         ><span>{{ post?.comments?.length }}</span>
       </div>
       <div
-        class="bg-[#3E414E] py-2 px-4 rounded-md inline-flex place-items-center space-x-4"
+        class="bg-[#3E414E] py-2 px-4 rounded-md space-x-4 inline-flex h-fit"
       >
         <i-feather name="clock" class="icon-small"></i-feather
         ><span>{{ post?.creationDate | date : "mediumDate" }}</span>

@@ -7,6 +7,7 @@ export class Post {
   public likes: number;
   public dislikes: number;
   public comments: string[];
+  public tags: string[];
   constructor(
     id: number,
     title: string,
@@ -15,7 +16,8 @@ export class Post {
     creationDate: Date,
     likes: number,
     dislikes: number,
-    comments: string[]
+    comments: string[],
+    tags: string[]
   ) {
     this.id = id;
     this.title = title;
@@ -25,5 +27,6 @@ export class Post {
     this.likes = likes;
     this.dislikes = dislikes;
     this.comments = comments;
+    this.tags = tags;
   }
 }

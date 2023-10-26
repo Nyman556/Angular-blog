@@ -23,6 +23,7 @@ export class CreatePostComponent {
       likes: 0,
       dislikes: 0,
       comments: [],
+      tags: [],
     };
   }
   SubmitPost() {

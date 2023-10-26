@@ -23,7 +23,9 @@
           {{ post.title | titlecase }}
         </h2>
         <div class="card-actions justify-end">
-          <div class="badge badge-outline">Tech</div>
+          <div class="badge badge-outline" *ngFor="let tag of post.tags">
+            <span> {{ tag | titlecase }}</span>
+          </div>
         </div>
       </div>
     </a>
