@@ -33,6 +33,7 @@ export class CreatePostComponent {
       this.NewPost.body !== ''
     ) {
       this.PostService.addPost(this.NewPost);
+      this.PostService.savePosts();
     }
   }
   clear() {

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-blog-details',
@@ -13,7 +14,10 @@ export class BlogDetailsComponent {
   post: Post | undefined;
   comment: string = '';
   _postId: number;
-  constructor(private PostService: PostService) {
+  constructor(
+    private PostService: PostService,
+    private storageService: StorageService
+  ) {
     this._postId = Number(this.route.snapshot.params['id']);
     this.post = this.PostService.getPostById(this._postId);
   }
@@ -27,6 +31,7 @@ export class BlogDetailsComponent {
     if (this.comment) {
       this.PostService.addComment(this.comment, this._postId);
       this.comment = '';
+      this.PostService.savePosts();
     }
   }
 }
