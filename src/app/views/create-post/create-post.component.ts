@@ -23,15 +23,11 @@ export class CreatePostComponent {
       likes: 0,
       dislikes: 0,
       comments: [],
-      tags: [],
+      tag: '',
     };
   }
   SubmitPost() {
-    if (
-      this.NewPost.title &&
-      this.NewPost.thumbnailUrl &&
-      this.NewPost.body !== ''
-    ) {
+    if (this.NewPost.title && this.NewPost.thumbnailUrl && this.NewPost.body) {
       this.PostService.addPost(this.NewPost);
       this.PostService.savePosts();
     }

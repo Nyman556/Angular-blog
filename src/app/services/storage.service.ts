@@ -27,7 +27,7 @@ export class StorageService {
               'Spännande inlägg!',
               'Vilken teknologi är du mest entusiastisk över?',
             ],
-            tags: ['tech'],
+            tag: 'tech',
           },
           {
             id: 2,
@@ -42,7 +42,7 @@ export class StorageService {
               'Fantastiskt inlägg om 5G!',
               'Vilka appar tror du kommer dra nytta av 5G mest?',
             ],
-            tags: ['tech'],
+            tag: 'tech',
           },
           {
             id: 3,
@@ -57,7 +57,7 @@ export class StorageService {
               'Bra tips för online-säkerhet!',
               'Har du några andra råd för att undvika bedrägerier?',
             ],
-            tags: ['tech'],
+            tag: 'tech',
           },
           {
             id: 4,
@@ -72,7 +72,7 @@ export class StorageService {
               'Spännande framtid för transport!',
               'Tror du att du kommer använda en självkörande bil inom de närmaste åren?',
             ],
-            tags: ['tech', 'Cars'],
+            tag: 'tech',
           },
           {
             id: 5,
@@ -87,7 +87,7 @@ export class StorageService {
               'Fantastiskt inlägg om VR!',
               'Har du någonsin provat en VR-upplevelse?',
             ],
-            tags: ['tech'],
+            tag: 'tech',
           },
           {
             id: 6,
@@ -102,7 +102,7 @@ export class StorageService {
               'Spännande inlägg om blockchain!',
               'Tror du att blockchain kommer revolutionera finanssektorn?',
             ],
-            tags: ['tech', 'future'],
+            tag: 'tech',
           },
         ]
       : JSON.parse(postJson);

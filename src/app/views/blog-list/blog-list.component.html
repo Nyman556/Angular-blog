@@ -23,8 +23,8 @@
           {{ post.title | titlecase }}
         </h2>
         <div class="card-actions justify-end">
-          <div class="badge badge-outline" *ngFor="let tag of post.tags">
-            <span> {{ tag | titlecase }}</span>
+          <div class="badge badge-outline">
+            <span> {{ post.tag | titlecase }}</span>
           </div>
         </div>
       </div>

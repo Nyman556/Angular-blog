@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnChanges } from '@angular/core';
 import { Post } from '../models/post';
 import { StorageService } from './storage.service';
 
@@ -6,7 +6,7 @@ import { StorageService } from './storage.service';
   providedIn: 'root',
 })
 export class PostService {
-  private _posts: Post[];
+  public _posts: Post[];
 
   constructor(private StorageService: StorageService) {
     this._posts = StorageService.loadPosts();
