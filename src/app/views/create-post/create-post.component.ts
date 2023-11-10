@@ -9,32 +9,8 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class CreatePostComponent {
   date: Date = new Date();
-  NewPost: Post;
   get posts(): Post[] {
     return this.PostService.post;
   }
-  constructor(private PostService: PostService) {
-    this.NewPost = {
-      id: this.posts.length + 1,
-      title: '',
-      thumbnailUrl: '',
-      body: '',
-      creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: [],
-      tag: '',
-    };
-  }
-  SubmitPost() {
-    if (this.NewPost.title && this.NewPost.thumbnailUrl && this.NewPost.body) {
-      this.PostService.addPost(this.NewPost);
-      this.PostService.savePosts();
-    }
-  }
-  clear() {
-    this.NewPost.title = '';
-    this.NewPost.thumbnailUrl = '';
-    this.NewPost.body = '';
-  }
+  constructor(private PostService: PostService) {}
 }

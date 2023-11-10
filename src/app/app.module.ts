@@ -11,6 +11,8 @@ import { BlogDetailsComponent } from './views/blog-details/blog-details.componen
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { CreatePostComponent } from './views/create-post/create-post.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreatePostFormComponent } from './components/create-post-form/create-post-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,15 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutMeComponent,
     CreatePostComponent,
     FooterComponent,
+    CreatePostFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, IconsModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IconsModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

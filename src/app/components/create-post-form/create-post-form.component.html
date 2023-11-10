@@ -1,0 +1,56 @@
+<form
+  class="form-control w-full"
+  [formGroup]="PostForm"
+  (ngSubmit)="onSubmit()"
+>
+  <label class="label">
+    <span class="label-text">Title: </span>
+  </label>
+  <input
+    id="title"
+    type="text"
+    placeholder="Type here..."
+    class="input input-bordered w-full"
+    formControlName="PostTitle"
+    name="title"
+  />
+  <label class="label">
+    <span class="label-text">ImageUrl: </span>
+  </label>
+  <input
+    id="ImageUrl"
+    type="text"
+    placeholder="https://placehold.co/600x400/EEE/31343C"
+    class="input input-bordered w-full"
+    formControlName="ImageUrl"
+    name="ImageUrl"
+  />
+  <label class="label">
+    <span class="label-text">Content</span>
+  </label>
+  <textarea
+    class="textarea textarea-bordered"
+    placeholder="Type here..."
+    rows="10"
+    formControlName="PostBody"
+    name="body"
+  ></textarea>
+  <label class="label">
+    <span class="label-text">Tag</span>
+  </label>
+  <input
+    type="text"
+    placeholder="Type here..."
+    class="input input-bordered w-full"
+    formControlName="PostTag"
+    name="tags"
+  />
+  <div class="flex justify-end space-x-4 my-4">
+    <button class="btn bg-transparent border-white" (click)="clear()">
+      Discard
+    </button>
+    <button type="submit" class="btn bg-primary" [disabled]="!PostForm.valid">
+      Publish
+    </button>
+  </div>
+</form>
