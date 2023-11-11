@@ -2,7 +2,7 @@
   <div class="inline-flex place-items-center">
     <img src="../../assets/logo.svg" alt="" />
     <nav class="space-x-12 mx-4 hidden md:flex">
-      <a routerLink="" (click)="print(this)">List of Posts</a>
+      <a routerLink="">List of Posts</a>
       <a routerLink="About">About Me</a>
       <a *ngIf="Admin" routerLink="Create">Create post</a>
     </nav>
@@ -12,7 +12,7 @@
         tabindex="0"
         class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
       >
-        <li><a routerLink="" (click)="print(this)">List of Posts</a></li>
+        <li><a routerLink="">List of Posts</a></li>
         <li><a routerLink="About">About Me</a></li>
         <li *ngIf="Admin"><a routerLink="Create">Create post</a></li>
       </ul>

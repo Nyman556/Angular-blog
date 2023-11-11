@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CreatePostFormComponent } from './components/create-post-form/create-post-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeadingComponent } from './components/heading/heading.component';
+import { BlogListPostComponent } from './components/blog-list-post/blog-list-post.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HeadingComponent } from './components/heading/heading.component';
     FooterComponent,
     CreatePostFormComponent,
     HeadingComponent,
+    BlogListPostComponent,
   ],
   imports: [
     BrowserModule,

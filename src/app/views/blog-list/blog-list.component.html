@@ -1,25 +1,10 @@
-<div class="bg-slate-400 dark:bg-[#343744] px-10 rounded-lg pt-6">
+<div class="bg-slate-400 dark:bg-[#343744] px-10 rounded-lg py-6">
   <app-heading Content="Browse all posts"></app-heading>
   <div class="divider"></div>
   <ul class="grid lg:grid-cols-3 gap-10 pb-6">
-    <a
+    <app-blog-list-post
       *ngFor="let post of posts"
-      [routerLink]="['/Blog', post.id]"
-      class="card lg:w-80 shadow-xl hover:outline-8 hover:outline transition-all outline-slate-600"
-    >
-      <figure class="h-2/4">
-        <img class="h-4/4" src="{{ post.thumbnailUrl }}" />
-      </figure>
-      <div class="h-2/4 card-body flex justify-between">
-        <h2 class="card-title">
-          {{ post.title | titlecase }}
-        </h2>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">
-            <span> {{ post.tag | titlecase }}</span>
-          </div>
-        </div>
-      </div>
-    </a>
+      [post]="post"
+    ></app-blog-list-post>
   </ul>
 </div>
