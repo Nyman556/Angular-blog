@@ -1,0 +1,70 @@
+<form class="w-full" [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+  <label class="label">
+    <span class="label-text">FIRST NAME</span>
+  </label>
+  <input
+    required
+    id="firstname"
+    type="text"
+    placeholder="Enter your first name"
+    class="input input-bordered w-full"
+    formControlName="FirstName"
+    name="firstname"
+  />
+  <label class="label">
+    <span class="label-text">LAST NAME</span>
+  </label>
+  <input
+    required
+    id="lastname"
+    type="text"
+    placeholder="Enter your last name"
+    class="input input-bordered w-full"
+    formControlName="LastName"
+    name="lastname"
+  />
+  <label class="label">
+    <span class="label-text">EMAIL</span>
+  </label>
+  <input
+    required
+    id="email"
+    type="text"
+    placeholder="Enter your email"
+    class="input input-bordered w-full"
+    formControlName="Email"
+    name="email"
+  />
+  <label class="label">
+    <span class="label-text">PHONE NUMBER</span>
+  </label>
+  <input
+    required
+    id="phonenumber"
+    type="text"
+    placeholder="Enter your phone number"
+    class="input input-bordered w-full"
+    formControlName="PhoneNumber"
+    name="phonenumber"
+  />
+  <label class="label">
+    <span class="label-text">MESSAGE</span>
+  </label>
+  <textarea
+    required
+    class="textarea textarea-bordered w-full"
+    placeholder="Type here..."
+    rows="10"
+    formControlName="Message"
+    name="message"
+  ></textarea>
+  <div class="flex justify-end space-x-4 my-4">
+    <button
+      type="submit"
+      class="btn bg-primary"
+      [disabled]="!ContactForm.valid"
+    >
+      Send Message
+    </button>
+  </div>
+</form>

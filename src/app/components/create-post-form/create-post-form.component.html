@@ -50,11 +50,7 @@
     name="tags"
   />
   <div class="flex justify-end space-x-4 my-4">
-    <button
-      type="button"
-      class="btn bg-transparent border-white"
-      (click)="clear()"
-    >
+    <button class="btn bg-transparent border-white" (click)="clear()">
       Discard
     </button>
     <button type="submit" class="btn bg-primary" [disabled]="!PostForm.valid">
