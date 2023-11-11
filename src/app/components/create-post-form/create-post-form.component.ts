@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
-import { ToastrService } from 'ngx-toastr';
 import { ToastService } from 'src/app/services/toastr.service';
 
 @Component({
@@ -26,6 +25,7 @@ export class CreatePostFormComponent {
   ) {}
   clear() {
     this.PostForm.reset();
+    this.ToastService.success('Fields Cleared!');
   }
   onSubmit() {
     this.NewPost = {
