@@ -13,6 +13,7 @@ import { CreatePostComponent } from './views/create-post/create-post.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreatePostFormComponent } from './components/create-post-form/create-post-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeadingComponent } from './components/heading/heading.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CreatePostComponent,
     FooterComponent,
     CreatePostFormComponent,
+    HeadingComponent,
   ],
   imports: [
     BrowserModule,

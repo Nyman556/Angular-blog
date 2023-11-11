@@ -9,6 +9,9 @@ import {
   ThumbsDown,
   ThumbsUp,
   ChevronLeft,
+  Twitter,
+  Youtube,
+  Facebook,
 } from 'angular-feather/icons';
 
 const icons = {
@@ -19,6 +22,9 @@ const icons = {
   ThumbsDown,
   ThumbsUp,
   ChevronLeft,
+  Twitter,
+  Youtube,
+  Facebook,
 };
 
 @NgModule({
