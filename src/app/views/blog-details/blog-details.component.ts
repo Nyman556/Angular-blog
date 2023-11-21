@@ -7,13 +7,12 @@ import { ToastService } from 'src/app/services/toastr.service';
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
-  styleUrls: ['./blog-details.component.css'],
 })
 export class BlogDetailsComponent {
-  route: ActivatedRoute = inject(ActivatedRoute);
-  post: Post | undefined;
-  comment: string = '';
-  _postId: number;
+  private route: ActivatedRoute = inject(ActivatedRoute);
+  public post: Post | undefined;
+  public comment: string = '';
+  private _postId: number;
   constructor(
     private PostService: PostService,
     private ToastService: ToastService
@@ -21,13 +20,13 @@ export class BlogDetailsComponent {
     this._postId = Number(this.route.snapshot.params['id']);
     this.post = this.PostService.getPostById(this._postId);
   }
-  likeClick() {
+  public likeClick() {
     if (this.post !== undefined) this.PostService.like(this.post);
   }
-  dislikeClick() {
+  public dislikeClick() {
     if (this.post !== undefined) this.PostService.dislike(this.post);
   }
-  createComment() {
+  public createComment() {
     if (this.comment) {
       this.PostService.addComment(this.comment, this._postId);
       this.comment = '';

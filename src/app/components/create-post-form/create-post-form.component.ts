@@ -7,13 +7,12 @@ import { ToastService } from 'src/app/services/toastr.service';
 @Component({
   selector: 'app-create-post-form',
   templateUrl: './create-post-form.component.html',
-  styleUrls: ['./create-post-form.component.css'],
 })
 export class CreatePostFormComponent {
   @Input() posts: Post[] = [];
-  date: Date = new Date();
-  NewPost: Post | undefined;
-  PostForm = new FormGroup({
+  private date: Date = new Date();
+  private NewPost: Post | undefined;
+  public PostForm = new FormGroup({
     PostTitle: new FormControl(''),
     ImageUrl: new FormControl(''),
     PostBody: new FormControl(''),
@@ -23,11 +22,11 @@ export class CreatePostFormComponent {
     private PostService: PostService,
     private ToastService: ToastService
   ) {}
-  clear() {
+  public clear() {
     this.PostForm.reset();
     this.ToastService.success('Fields Cleared!');
   }
-  onSubmit() {
+  public onSubmit() {
     this.NewPost = new Post(
       this.posts.length + 1,
       this.PostForm.value.PostTitle ?? '',
