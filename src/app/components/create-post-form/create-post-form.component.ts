@@ -28,17 +28,17 @@ export class CreatePostFormComponent {
     this.ToastService.success('Fields Cleared!');
   }
   onSubmit() {
-    this.NewPost = {
-      id: this.posts.length + 1,
-      title: this.PostForm.value.PostTitle ?? '',
-      thumbnailUrl: this.PostForm.value.ImageUrl ?? '',
-      body: this.PostForm.value.PostBody ?? '',
-      creationDate: this.date,
-      likes: 0,
-      dislikes: 0,
-      comments: [],
-      tag: this.PostForm.value.PostTag ?? '',
-    };
+    this.NewPost = new Post(
+      this.posts.length + 1,
+      this.PostForm.value.PostTitle ?? '',
+      this.PostForm.value.ImageUrl ?? '',
+      this.PostForm.value.PostBody ?? '',
+      this.date,
+      0,
+      0,
+      [],
+      this.PostForm.value.PostTag ?? ''
+    );
     this.PostService.addPost(this.NewPost);
     this.PostService.savePosts();
     this.PostForm.reset();
